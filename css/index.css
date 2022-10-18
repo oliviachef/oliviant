@@ -4,109 +4,35 @@
   box-sizing: monospace;
 }
 
-body{
+body {
   display: flex;
   justify-content: center;
-  min-height: 100vh;
-  background: #fbe9e7;
+  align-items: center;
+  background: linear-gradient(45deg, aqua, #ff5acd);
 }
 
-.card{
+.card {
   position: relative;
-  width: 300px;
-  height: 400px;
+  width: 350px;
+  height: 190px;
   background: #fff;
-  transform-style: preserve-3d;
-  transform: perspective(1000px);
-  box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
-  transition: 1s;
+  border-radius: 20px;
+  box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+  transition: 0.5s;
 }
 
-.card:hover {
-  transform: translateX(50%);
+.card:hover{
+  height: 450px;
 }
 
-.card:hover .imgBox{
-  transform: rotateY(-180deg);
-}
-
-.card .imgBox{
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  transform-origin: left;
-  transform-style: preserve-3d;
-  background: #000;
-  transition: 1s;
-}
-
-.card .imgBox img{
+.imgBox {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-}
-
-.card .imgBox img:nth-child(2){
-  transform: rotateY(180deg);
-}
-
-.card .details{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card .details .content{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.card .details .content h1{
-  text-align: center;
-  font-weight: 700;
-  line-height: 1em;
-}
-
-.card .details .content h2 span{
-  color: lawngreen;
-  font-size: 0.8em;
-}
-
-.card .details .content .socials{
-  position: relative;
-  display: flex;
-  margin-top: 10px;
-}
-
-.card .details .content .socials a{
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  background: #333;
-  color: lawngreen;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  margin: 5px;
-  font-size: 18px;
-  transition: 0.2s;
-}
-
-.card .details .content .socials a:hover{
-  background: limegreen;
+  left: 50%;
+  top: -50px;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.35);
 }
